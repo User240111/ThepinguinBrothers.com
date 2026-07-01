@@ -1044,3 +1044,171 @@ nav ul li a:hover::after{
     box-shadow:0 0 20px rgba(255,0,0,.3);
 }
 
+/* ==========================================
+   RESPONSIVE GENERAL (SOLO CELULAR)
+========================================== */
+
+@media screen and (max-width:768px){
+
+    body{
+        overflow-x:hidden;
+    }
+
+    /* Todas las secciones */
+    section{
+        padding:70px 20px;
+    }
+
+    .section-title{
+        font-size:2rem;
+        margin-bottom:35px;
+    }
+
+    /* HERO */
+
+    .hero-slider{
+        height:100vh;
+    }
+
+    .hero-content{
+        padding:0 20px;
+        margin-top:90px;
+    }
+
+    .hero-content h1{
+        font-size:2.3rem;
+        line-height:1.15;
+    }
+
+    .hero-content p{
+        font-size:1.05rem;
+        margin:20px 0 35px;
+    }
+
+    .btn{
+        padding:14px 35px;
+        font-size:1rem;
+    }
+
+    /* ESTADÍSTICAS */
+
+    .stats{
+        display:grid;
+        grid-template-columns:1fr;
+        gap:20px;
+        padding:50px 20px;
+    }
+
+    .stat{
+        width:100%;
+    }
+
+    /* SERVICIOS */
+
+    .cards{
+        grid-template-columns:1fr;
+        gap:25px;
+    }
+
+    .card{
+        padding:18px;
+    }
+
+    .card-slider{
+        height:220px;
+    }
+
+    /* HABILIDADES */
+
+    .habilidades-grid{
+        grid-template-columns:1fr;
+        gap:25px;
+    }
+
+    .habilidad{
+        height:300px;
+    }
+
+    .info h3{
+        font-size:1.6rem;
+    }
+
+    /* NOSOTROS */
+
+    .about-container{
+        grid-template-columns:1fr;
+        gap:35px;
+    }
+
+    .about-content{
+        text-align:center;
+    }
+
+    .about-content h2{
+        font-size:2.2rem;
+    }
+
+    .about-content p{
+        font-size:1rem;
+    }
+
+    .linea{
+        margin:20px auto;
+    }
+
+    .about-stats{
+        flex-direction:column;
+        gap:20px;
+    }
+
+    /* CTA */
+
+    .cta{
+        padding:70px 20px;
+    }
+
+    .cta-container{
+        grid-template-columns:1fr;
+        gap:40px;
+    }
+
+    .cta-content{
+        text-align:center;
+    }
+
+    .cta h2{
+        font-size:2rem;
+    }
+
+    .cta p{
+        font-size:1rem;
+    }
+
+    .cta-video video{
+        width:100%;
+        max-width:280px;
+        height:480px;
+    }
+
+    /* REDES */
+
+    .redes{
+        padding:70px 20px;
+    }
+
+    .redes-container{
+        grid-template-columns:1fr;
+    }
+
+    .red{
+        font-size:1.1rem;
+    }
+
+    /* FOOTER */
+
+    footer{
+        padding:25px 15px;
+        font-size:.95rem;
+    }
+
+}
