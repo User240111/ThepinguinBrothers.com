@@ -4,84 +4,431 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>ThepinguinBrothers</title>
-
+    <link rel="shortcut icon" href="imagenes/logo_The_Puinguin_Brothers.png" type="image/x-icon">
     <link rel="stylesheet" href="Untitled-1.css">
 </head>
 <body>
 
 <header>
-    <div class="logo">ThePinguinBrothers</div>
+    <div class="logo">
+        <img src="imagenes/logo_The_Puinguin_Brothers.png" alt="Logo" class="logo-img">
 
-    <nav>
+         <div class="logo-text">
+        <span class="yellow">T</span><span class="white">he</span>
+        <span class="yellow">P</span><span class="white">inguin</span>
+        <span class="yellow">B</span><span class="white">rothers</span>
+    </div>
+</div>
+     
+    <div class="menu-toggle" id="menu-toggle">
+        ☰
+    </div>
+
+    <nav id="nav-menu">
         <ul>
-            <li><a href="#inicio">inicio</a></li>
             <li><a href="#servicios">Servicios</a></li>
             <li><a href="#nosotros">Nosotros</a></li>
-            <li><a href="#contacto">Contacto</a></li>
+            <li><a href="Productos.html">Productos</a></li>
+            <li><a href="#Eventos">Eventos</a></li>
+            <li><a href="#Planes">Planes</a></li>
+            
         </ul>
     </nav>
 </header>
 
-<section class="hero" id="inicio">
+<section class="hero-slider">
+
+    <video class="video-slide active" autoplay muted loop playsinline>
+        <source src="videos/inicio_video.mp4" type="video/mp4">
+    </video>
+
+    <video class="video-slide" autoplay muted loop playsinline>
+        <source src="videos/Inicio2_video.mp4" type="video/mp4">
+    </video>
+
+    <video class="video-slide" autoplay muted loop playsinline>
+        <source src="videos/inicio3_video.mp4" type="video/mp4">
+    </video>
+
     <div class="hero-content">
-        <h1>No sueñes tu vida vive tu sueno/h1>
+        <h1>No sueñes tu vida<br>vive tu sueño</h1>
+
         <p>
-            ¡Las mejores clases de calistenia de todo cancun!
+            ¡Las mejores clases de calistenia de todo Cancún!
         </p>
-        <a href="https://wa.me/5226562265" class="btn">Contáctanos</a>
+
+        <a href="https://wa.me/5626562265" class="btn">
+            Contáctanos
+        </a>
     </div>
+
+    <div class="slider-dots">
+        <span class="dot active"></span>
+        <span class="dot"></span>
+        <span class="dot"></span>
+    </div>
+
+</section>
+
+<div class="frase-divider">
+    <span> FORJANDO ATLETAS • CREANDO DISCIPLINA • SUPERANDO LÍMITES </span>
+</div>
+<section id="nosotros">
+
+
+    <div class="about-container">
+
+        <div class="about-img">
+            <img src="imagenes/equipo.jpeg" alt="The Pinguin Brothers">
+        </div>
+
+        <div class="about-content">
+
+            <span class="about-subtitle">
+                CONOCE NUESTRA HISTORIA
+            </span>
+
+            <h2>
+                Sobre <span>Nosotros</span>
+            </h2>
+
+            <div class="linea"></div>
+
+            <p>
+                Somos un grupo de personas apasionadas por la calistenia y el street workout, las cuales
+                buscamos mejorar dia con dia con el obejetivo de tener una vida plena y satisfactoria.
+
+                Ademas de esto The Pingüin Brother´s se encarga de sobrellevar la enseñansa a futuras 
+                generaciones de atletas y tambien de futuros entrenadores de calistenia.
+                
+            </p>
+
+            <p>
+                The Pingüin Brother´s se encarga de realizar eventos con el fin de fomentar el deporte
+                y apoyar a quien mas lo necesite, haciendo competencias con causa y tambien una liga 
+                profesional.
+            </p>
+
+            <p>
+                Aquí no solo entrenas, te conviertes en tu mejor versión.
+            </p>
+
+            <div class="about-stats">
+
+                <div class="about-stat">
+                    <h3>100+</h3>
+                    <span>Alumnos</span>
+                </div>
+
+                <div class="about-stat">
+                    <h3>8+</h3>
+                    <span>Años de experiencia</span>
+                </div>
+
+                <div class="about-stat">
+                    <h3>100%</h3>
+                    <span>Compromiso</span>
+                </div>
+
+            </div>
+
+        </div>
+
+    </div>
+
 </section>
 
 <section id="servicios">
-    <h2 class="section-title">Nuestros Servicios</h2>
+
+    <h2 class="section-title">
+        Nuestros <span style="color:rgb(249,253,4)">Servicios</span>
+    </h2>
 
     <div class="cards">
+
+        <!-- Tarjeta 1 -->
         <div class="card">
-            <h3>Desarrollo Web</h3>
-            <p>Creación de sitios modernos, rápidos y seguros.</p>
+
+            <div class="card-slider">
+
+                <img src="imagenes/principiante.jpeg" class="active">
+                <img src="imagenes/Principiante2.jpeg">
+                <img src="imagenes/personalizado.jpeg">
+
+                <div class="slider-dots">
+                    <span class="active"></span>
+                    <span></span>
+                    <span></span>
+                </div>
+
+            </div>
+
+            <div class="card-content">
+
+                <h3>Entrenamiento para principiantes</h3>
+
+                <p>
+                    Aprende desde cero con una metodología progresiva,
+                    segura y adaptada a tu nivel.
+                </p>
+
+            </div>
+
         </div>
 
+        <!-- Tarjeta 2 -->
         <div class="card">
-            <h3>Marketing Digital</h3>
-            <p>Estrategias para aumentar tu presencia en línea.</p>
+
+            <div class="card-slider">
+
+                <img src="imagenes/avanzados.jpeg" class="active">
+                <img src="imagenes/equipo.jpeg">
+                <img src="imagenes/avanzado2.jpeg">
+
+                <div class="slider-dots">
+                    <span class="active"></span>
+                    <span></span>
+                    <span></span>
+                </div>
+
+            </div>
+
+            <div class="card-content">
+
+                <h3>Calistenia avanzada</h3>
+
+                <p>
+                    Domina habilidades como Muscle Up,
+                    Front Lever, Back Lever y Handstand.
+                </p>
+
+            </div>
+
         </div>
 
+        <!-- Tarjeta 3 -->
         <div class="card">
-            <h3>Consultoría</h3>
-            <p>Asesoramiento profesional para optimizar procesos.</p>
+
+            <div class="card-slider">
+
+                <img src="imagenes/personalizado_chema.jpeg" class="active">
+                <img src="imagenes/personalizado_leo.jpeg">
+                <img src="imagenes/personalizado_pizzaron.jpeg">
+
+                <div class="slider-dots">
+                    <span class="active"></span>
+                    <span></span>
+                    <span></span>
+                </div>
+
+            </div>
+
+            <div class="card-content">
+
+                <h3>Entrenamiento personalizado</h3>
+
+                <p>
+                    Rutinas diseñadas según tus objetivos,
+                    experiencia y condición física.
+                </p>
+
+            </div>
+
         </div>
+
     </div>
+
+</section>
+<section id="habilidades">
+
+    <h2 class="section-title">
+        Habilidades que <span>Desarrollarás</span>
+    </h2>
+
+    <div class="habilidades-grid">
+
+        <div class="habilidad">
+
+            <video autoplay muted loop playsinline>
+                <source src="videos/MU.mp4" type="video/mp4">
+            </video>
+
+            <div class="overlay"></div>
+
+            <div class="info">
+                <h3>Muscle Up</h3>
+                <p>Potencia • Explosividad</p>
+            </div>
+
+        </div>
+
+        <div class="habilidad">
+
+            <video autoplay muted loop playsinline>
+                <source src="videos/hands.mp4" type="video/mp4">
+            </video>
+
+            <div class="overlay"></div>
+
+            <div class="info">
+                <h3>Handstand</h3>
+                <p>Equilibrio • Control</p>
+            </div>
+
+        </div>
+
+        <div class="habilidad">
+
+            <video autoplay muted loop playsinline>
+                <source src="videos/video_FrontLever.mp4" type="video/mp4">
+            </video>
+
+            <div class="overlay"></div>
+
+            <div class="info">
+                <h3>Front Lever</h3>
+                <p>Espalda • Core</p>
+            </div>
+
+        </div>
+
+        <div class="habilidad">
+
+            <video autoplay muted loop playsinline>
+                <source src="videos/Video_BackLever (2).mp4" type="video/mp4">
+            </video>
+
+            <div class="overlay"></div>
+
+            <div class="info">
+                <h3>Back Lever</h3>
+                <p>Fuerza • Técnica</p>
+            </div>
+
+        </div>
+
+        <div class="habilidad">
+
+            <video autoplay muted loop playsinline>
+                <source src="videos/Video_Full.mp4" type="video/mp4">
+            </video>
+
+            <div class="overlay"></div>
+
+            <div class="info">
+                <h3>Full Planche</h3>
+                <p>Empuje • Balance</p>
+            </div>
+
+        </div>
+
+        <div class="habilidad">
+
+            <video autoplay muted loop playsinline>
+                <source src="videos/vide_L-sit.mp4" type="video/mp4">
+            </video>
+
+            <div class="overlay"></div>
+
+            <div class="info">
+                <h3>L-Sit</h3>
+                <p>Core • Resistencia</p>
+            </div>
+
+        </div>
+
+        <div class="habilidad">
+
+            <video autoplay muted loop playsinline>
+                <source src="videos/Video_Free (2).mp4" type="video/mp4">
+            </video>
+
+            <div class="overlay"></div>
+
+            <div class="info">
+                <h3>FreeStyle</h3>
+                <p>Trucos</p>
+            </div>
+
+        </div>
+
+    </div>
+
+</section>
+<section class="cta">
+
+    <div class="cta-container">
+
+        <div class="cta-content">
+
+            <h2>
+                ¿Que esperas para unirte?
+                <span><br>Te estamos esperando.</span>
+            </h2>
+
+            <p>
+                Únete a The Pinguin Brothers y forma parte de una familia
+                que entrena para superarse cada día.
+
+            </p>
+
+            <a href="https://wa.me/5626562265" class="cta-btn">
+                ÚNETE A LA FAMILIA
+            </a>
+
+        </div>
+
+        <div class="cta-video">
+
+            <video controls>
+                <source src="videos/anuncio_video.mp4" type="video/mp4">
+            </video>
+
+        </div>
+
+    </div>
+
 </section>
 
-<section id="nosotros">
-    <h2 class="section-title">Sobre Nosotros</h2>
 
-    <div class="about">
-        <p>
-            Somos una empresa comprometida con la excelencia y la innovación.
-            Nuestro objetivo es brindar soluciones eficientes que generen valor
-            a nuestros clientes y contribuyan a su crecimiento.
-        </p>
+<section class="redes">
+
+    <h2 class="section-title">
+        Síguenos en <span>Redes Sociales</span>
+    </h2>
+
+    <div class="redes-container">
+
+        <a href="https://www.tiktok.com/@thepinguinbrothers7?_r=1&_t=ZS-97VwthWsQjJ" class="red social-tiktok" target="_blank">
+             TikTok
+        </a>
+
+        <a href="https://www.instagram.com/thepinguinbrothers?igsh=MWtsZnhoOWwycWh6OA%3D%3D&utm_source=qr" class="red social-instagram" target="_blank">
+             Instagram
+        </a>
+
+        <a href="https://www.facebook.com/share/17CRHGNU4f/?mibextid=wwXIfr" class="red social-facebook" target="_blank">
+             Facebook
+        </a>
+
+        <a href="https://www.youtube.com/@thepinguinzone3806" class="red social-youtube" target="_blank">
+             YouTube
+        </a>
+
     </div>
+
 </section>
 
-<section id="contacto">
-    <h2 class="section-title">Contacto</h2>
-
-    <div class="contact">
-        <form>
-            <input type="text" placeholder="Nombre completo" required>
-            <input type="email" placeholder="Correo electrónico" required>
-            <textarea rows="5" placeholder="Escribe tu mensaje"></textarea>
-
-            <button type="submit">Enviar Mensaje</button>
-        </form>
-    </div>
-</section>
 
 <footer>
-    <p>© 2026 Mi Empresa | Todos los derechos reservados</p>
+    <p>© 2026 ThePinguinBrohthers | derechos reservados</p>
 </footer>
+
+<script src="servicios-slider.js"></script>
+<script src="Barra_nav.js"></script>
+<script src="videos.js"></script>
+
+
 
 </body>
 </html>
