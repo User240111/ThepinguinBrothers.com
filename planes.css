@@ -1129,41 +1129,6 @@ tbody tr:hover{
     line-height:1.7;
 }
 
-
-
-/*=====================================
-        RESPONSIVE
-=====================================*/
-
-@media(max-width:768px){
-
-    .comparacion{
-
-        padding:80px 20px;
-    }
-
-    .comparacion h2{
-
-        font-size:2.2rem;
-    }
-
-    table{
-
-        min-width:650px;
-    }
-
-    .faq{
-
-        padding:80px 20px;
-    }
-
-    .faq h2{
-
-        font-size:2.2rem;
-    }
-
-}
-
 /*==================================
         WHATSAPP
 ==================================*/
@@ -1232,3 +1197,37 @@ tbody tr:hover{
 
 }
 
+
+
+/*=====================================
+        RESPONSIVE
+=====================================*/
+
+@media(max-width:768px){
+
+    .comparacion{
+
+        padding:80px 20px;
+    }
+
+    .comparacion h2{
+
+        font-size:2.2rem;
+    }
+
+    table{
+
+        min-width:650px;
+    }
+
+    .faq{
+
+        padding:80px 20px;
+    }
+
+    .faq h2{
+
+        font-size:2.2rem;
+    }
+
+}
