@@ -1,21 +1,44 @@
-const preguntas = document.querySelectorAll(".faq-question");
+const counters = document.querySelectorAll(".contador");
 
-preguntas.forEach((pregunta)=>{
+const observer = new IntersectionObserver((entries)=>{
 
-    pregunta.addEventListener("click",()=>{
+    entries.forEach(entry=>{
 
-        const respuesta = pregunta.nextElementSibling;
+        if(entry.isIntersecting){
 
-        if(respuesta.style.maxHeight){
+            const counter = entry.target;
+            const target = +counter.dataset.target;
 
-            respuesta.style.maxHeight=null;
+            let count = 0;
 
-        }else{
+            const update = ()=>{
 
-            respuesta.style.maxHeight=respuesta.scrollHeight+"px";
+                const increment = Math.ceil(target / 80);
+
+                count += increment;
+
+                if(count >= target){
+
+                    counter.innerText = target;
+
+                }else{
+
+                    counter.innerText = count;
+
+                    requestAnimationFrame(update);
+
+                }
+
+            }
+
+            update();
+
+            observer.unobserve(counter);
 
         }
 
     });
 
 });
+
+counters.forEach(counter=>observer.observe(counter));

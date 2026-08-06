@@ -56,9 +56,11 @@ header{
 
     transform:translateX(-50%);
 
-    width:94%;
+    width:92%;
 
-    padding:18px 40px;
+    max-width:1400px;
+
+    height:75px;
 
     display:flex;
 
@@ -66,23 +68,30 @@ header{
 
     align-items:center;
 
-    background:rgba(20,20,20,.65);
+    padding:0 35px;
 
-    backdrop-filter:blur(18px);
+    background:rgba(15,15,15,.65);
+
+    backdrop-filter:blur(20px);
+
+    -webkit-backdrop-filter:blur(20px);
 
     border:1px solid rgba(255,255,255,.08);
 
-    border-radius:18px;
+    border-radius:22px;
 
-    z-index:1000;
+    z-index:9999;
 
-    transition:.4s;
+    transition:.35s;
 }
 
+header:hover{
 
-/*=============================
-          LOGO
-=============================*/
+    border-color:rgba(249,253,4,.25);
+
+    box-shadow:0 0 30px rgba(249,253,4,.12);
+
+}
 
 .logo{
 
@@ -92,31 +101,35 @@ header{
 
     gap:14px;
 
-    font-size:2rem;
+    color:white;
+
+    font-size:1.7rem;
 
     font-weight:bold;
 
-    color:white;
 }
 
 .logo-img{
 
-    width:55px;
+    width:48px;
 
-    height:55px;
+    height:48px;
 
     border-radius:50%;
+
 }
 
 .yellow{
 
-    color:var(--amarillo);
+    color:rgb(249,253,4);
+
 }
 
+.white{
 
-/*=============================
-          NAVBAR
-=============================*/
+    color:white;
+
+}
 
 nav ul{
 
@@ -125,6 +138,7 @@ nav ul{
     gap:40px;
 
     list-style:none;
+
 }
 
 nav a{
@@ -133,16 +147,20 @@ nav a{
 
     text-decoration:none;
 
-    font-size:1.05rem;
+    font-size:1rem;
+
+    font-weight:600;
+
+    transition:.3s;
 
     position:relative;
 
-    transition:.3s;
 }
 
 nav a:hover{
 
-    color:var(--amarillo);
+    color:rgb(249,253,4);
+
 }
 
 nav a::after{
@@ -151,46 +169,47 @@ nav a::after{
 
     position:absolute;
 
-    bottom:-8px;
+    left:50%;
 
-    left:0;
+    bottom:-8px;
 
     width:0;
 
     height:2px;
 
-    background:var(--amarillo);
+    background:rgb(249,253,4);
 
-    transition:.3s;
+    transition:.35s;
+
+    transform:translateX(-50%);
+
 }
 
 nav a:hover::after{
 
     width:100%;
+
 }
-
-
-/*=============================
-      BOTON MENU
-=============================*/
 
 .menu-toggle{
 
     display:none;
 
-    font-size:2.3rem;
+    color:rgb(249,253,4);
+
+    font-size:2rem;
 
     cursor:pointer;
 
-    color:var(--amarillo);
 }
 
-
-/*=============================
-          HERO
-=============================*/
+/*========================================
+            HERO
+========================================*/
 
 .hero-planes{
+
+    position:relative;
 
     min-height:100vh;
 
@@ -202,531 +221,240 @@ nav a:hover::after{
 
     text-align:center;
 
-    padding:120px 10% 80px;
+    padding:140px 8% 100px;
+
+    overflow:hidden;
 
     background:
-    linear-gradient(rgba(0,0,0,.82),
-    rgba(0,0,0,.82)),
-    url("../imagenes/equipo.jpeg");
+    linear-gradient(rgba(0,0,0,.75),rgba(0,0,0,.85)),
+    url("imagenes/equipo.jpeg");
 
     background-size:cover;
 
     background-position:center;
 
-    position:relative;
 }
 
-.hero-planes::before{
-
-    content:"";
+.hero-overlay{
 
     position:absolute;
 
-    width:500px;
+    inset:0;
 
-    height:500px;
+    background:radial-gradient(circle,rgba(249,253,4,.08),transparent 70%);
 
-    background:rgba(249,253,4,.08);
-
-    filter:blur(180px);
-
-    border-radius:50%;
-
-    top:50%;
-
-    left:50%;
-
-    transform:translate(-50%,-50%);
 }
 
-.hero-text{
+.hero-contenido{
 
     position:relative;
 
-    z-index:5;
+    z-index:2;
 
     max-width:900px;
+
 }
 
-.mini-title{
+.hero-etiqueta{
+
+    display:inline-block;
+
+    padding:10px 22px;
+
+    border:1px solid rgba(249,253,4,.35);
+
+    border-radius:50px;
 
     color:var(--amarillo);
-
-    letter-spacing:6px;
 
     font-size:.9rem;
 
-    margin-bottom:20px;
+    letter-spacing:3px;
+
+    margin-bottom:25px;
+
 }
 
-.hero-text h1{
+.hero-contenido h1{
 
     font-size:5rem;
 
-    line-height:1.05;
-
-    margin-bottom:30px;
-
     font-weight:900;
+
+    line-height:1.1;
+
+    margin-bottom:25px;
+
 }
 
-.hero-text h1 span{
+.hero-contenido h1 span{
 
     color:var(--amarillo);
+
 }
 
-.hero-description{
+.hero-contenido p{
 
-    color:#d5d5d5;
+    max-width:700px;
+
+    margin:auto;
+
+    color:#d0d0d0;
 
     font-size:1.2rem;
 
     line-height:1.8;
 
-    max-width:750px;
-
-    margin:auto auto 45px;
 }
 
-.hero-btn{
-
-    display:inline-block;
-
-    padding:18px 45px;
-
-    border-radius:50px;
-
-    text-decoration:none;
-
-    font-size:1.1rem;
-
-    font-weight:bold;
-
-    color:black;
-
-    background:var(--amarillo);
-
-    transition:.35s;
-}
-
-.hero-btn:hover{
-
-    transform:translateY(-6px);
-
-    box-shadow:0 0 30px rgba(249,253,4,.45);
-}
-
-
-/*=============================
-        RESPONSIVE
-=============================*/
-
-@media(max-width:768px){
-
-    header{
-
-        width:95%;
-
-        padding:15px 20px;
-    }
-
-    .logo{
-
-        font-size:1.2rem;
-    }
-
-    .logo-img{
-
-        width:45px;
-
-        height:45px;
-    }
-
-    .menu-toggle{
-
-        display:block;
-    }
-
-    nav{
-
-        display:none;
-    }
-
-    .hero-text h1{
-
-        font-size:2.9rem;
-    }
-
-    .hero-description{
-
-        font-size:1rem;
-    }
-
-    .hero-btn{
-
-        width:100%;
-
-        max-width:280px;
-    }
-}
-
-/*====================================
-        SECCIÓN PLANES
-=====================================*/
-
-.planes{
-
-    padding:120px 8%;
-
-    background:#050505;
-
-    text-align:center;
-}
-
-.planes h2{
-
-    font-size:3.8rem;
-
-    color:white;
-
-    margin-bottom:15px;
-}
-
-.planes h2 span{
-
-    color:var(--amarillo);
-}
-
-.planes-subtitle{
-
-    color:#bdbdbd;
-
-    font-size:1.1rem;
-
-    margin-bottom:70px;
-}
-
-
-/*====================================
-        CONTENEDOR
-=====================================*/
-
-.planes-container{
-
-    display:grid;
-
-    grid-template-columns:repeat(auto-fit,minmax(320px,1fr));
-
-    gap:35px;
-
-    align-items:center;
-}
-
-
-/*====================================
-          TARJETAS
-=====================================*/
-
-.plan-card{
-
-    position:relative;
-
-    background:linear-gradient(180deg,#171717,#101010);
-
-    border-radius:30px;
-
-    padding:45px 35px;
-
-    border:1px solid rgba(255,255,255,.08);
-
-    transition:.4s;
-
-    overflow:hidden;
-}
-
-.plan-card::before{
-
-    content:"";
-
-    position:absolute;
-
-    width:220px;
-
-    height:220px;
-
-    background:rgba(249,253,4,.05);
-
-    border-radius:50%;
-
-    top:-120px;
-
-    right:-120px;
-
-    filter:blur(20px);
-
-    transition:.4s;
-}
-
-.plan-card:hover{
-
-    transform:translateY(-15px);
-
-    border-color:var(--amarillo);
-
-    box-shadow:0 20px 45px rgba(249,253,4,.18);
-}
-
-.plan-card:hover::before{
-
-    transform:scale(1.3);
-}
-
-
-/*====================================
-          PLAN DESTACADO
-=====================================*/
-
-.featured{
-
-    transform:scale(1.06);
-
-    border:2px solid var(--amarillo);
-
-    box-shadow:0 0 35px rgba(249,253,4,.28);
-}
-
-.featured:hover{
-
-    transform:scale(1.09) translateY(-12px);
-}
-
-.featured-text{
-
-    position:absolute;
-
-    top:18px;
-
-    right:-45px;
-
-    background:var(--amarillo);
-
-    color:black;
-
-    padding:8px 55px;
-
-    transform:rotate(45deg);
-
-    font-size:.75rem;
-
-    font-weight:bold;
-
-    letter-spacing:1px;
-}
-
-
-/*====================================
-            ICONO
-=====================================*/
-
-.plan-icon{
-
-    width:90px;
-
-    height:90px;
-
-    margin:auto;
-
-    margin-bottom:25px;
-
-    border-radius:50%;
-
-    background:rgba(249,253,4,.08);
-
-    border:2px solid rgba(249,253,4,.3);
+.hero-botones{
 
     display:flex;
 
     justify-content:center;
 
-    align-items:center;
+    gap:20px;
 
-    font-size:2.8rem;
+    margin-top:45px;
+
 }
 
+.btn-principal{
 
-/*====================================
-          TITULOS
-=====================================*/
-
-.plan-card h3{
-
-    font-size:2rem;
-
-    color:white;
-
-    margin-bottom:20px;
-}
-
-
-/*====================================
-           PRECIO
-=====================================*/
-
-.plan-card h4{
-
-    font-size:4rem;
-
-    color:var(--amarillo);
-
-    margin-bottom:5px;
-}
-
-.plan-card span{
-
-    color:#bdbdbd;
-
-    font-size:1rem;
-}
-
-
-/*====================================
-          BENEFICIOS
-=====================================*/
-
-.plan-card ul{
-
-    list-style:none;
-
-    margin:40px 0;
-
-    text-align:left;
-}
-
-.plan-card ul li{
-
-    color:#e5e5e5;
-
-    padding:14px 0;
-
-    border-bottom:1px solid rgba(255,255,255,.05);
-
-    font-size:1rem;
-}
-
-
-/*====================================
-            BOTÓN
-=====================================*/
-
-.plan-btn{
-
-    display:block;
-
-    width:100%;
-
-    padding:18px;
-
-    text-align:center;
-
-    text-decoration:none;
-
-    font-weight:bold;
-
-    border-radius:50px;
-
-    border:2px solid var(--amarillo);
-
-    color:var(--amarillo);
-
-    transition:.35s;
-}
-
-.plan-btn:hover{
+    padding:18px 45px;
 
     background:var(--amarillo);
 
     color:black;
 
-    box-shadow:0 0 25px rgba(249,253,4,.45);
+    border-radius:50px;
+
+    text-decoration:none;
+
+    font-weight:bold;
+
+    transition:.35s;
+
 }
 
+.btn-principal:hover{
 
-/*====================================
-         RESPONSIVE
-=====================================*/
+    transform:translateY(-5px);
+
+    box-shadow:0 0 30px rgba(249,253,4,.35);
+
+}
+
+.btn-secundario{
+
+    padding:18px 45px;
+
+    border:2px solid var(--amarillo);
+
+    color:var(--amarillo);
+
+    border-radius:50px;
+
+    text-decoration:none;
+
+    font-weight:bold;
+
+    transition:.35s;
+
+}
+
+.btn-secundario:hover{
+
+    background:var(--amarillo);
+
+    color:black;
+
+}
 
 @media(max-width:768px){
 
-    .planes{
+    .hero-contenido h1{
 
-        padding:90px 20px;
+        font-size:3rem;
+
     }
 
-    .planes h2{
+    .hero-botones{
 
-        font-size:2.6rem;
+        flex-direction:column;
+
+        align-items:center;
+
     }
 
-    .planes-container{
+    .btn-principal,
+    .btn-secundario{
 
-        grid-template-columns:1fr;
+        width:100%;
 
-        gap:30px;
+        max-width:300px;
+
     }
 
-    .featured{
-
-        transform:none;
-    }
-
-    .featured:hover{
-
-        transform:translateY(-10px);
-    }
-
-    .featured-text{
-
-        right:-50px;
-
-        font-size:.7rem;
-    }
-
-    .plan-card{
-
-        padding:35px 25px;
-    }
-
-    .plan-card h4{
-
-        font-size:3.2rem;
-    }
 }
 
-/*====================================
+/*========================================
+        TÍTULOS DE SECCIÓN
+========================================*/
+
+.titulo-seccion{
+
+    text-align:center;
+
+    max-width:800px;
+
+    margin:0 auto 70px;
+
+}
+
+.titulo-seccion span{
+
+    color:var(--amarillo);
+
+    font-size:.9rem;
+
+    font-weight:bold;
+
+    letter-spacing:4px;
+
+}
+
+.titulo-seccion h2{
+
+    font-size:3.3rem;
+
+    margin:20px 0;
+
+    color:white;
+
+}
+
+.titulo-seccion p{
+
+    color:#bdbdbd;
+
+    line-height:1.8;
+
+    font-size:1.1rem;
+
+}
+
+
+/*========================================
         BENEFICIOS
-=====================================*/
+========================================*/
 
 .beneficios{
 
     padding:120px 8%;
 
-    background:#090909;
+    background:#080808;
 
-    text-align:center;
-}
-
-.beneficios h2{
-
-    font-size:3rem;
-
-    margin-bottom:70px;
-
-    color:white;
-}
-
-.beneficios h2 span{
-
-    color:var(--amarillo);
 }
 
 .beneficios-grid{
@@ -735,40 +463,345 @@ nav a:hover::after{
 
     grid-template-columns:repeat(auto-fit,minmax(250px,1fr));
 
-    gap:35px;
+    gap:30px;
+
 }
 
-.beneficio{
+.beneficio-card{
 
-    background:#151515;
+    background:#121212;
 
-    padding:40px 30px;
+    border:1px solid rgba(255,255,255,.08);
 
     border-radius:25px;
 
-    border:1px solid rgba(255,255,255,.06);
+    padding:45px 30px;
 
-    transition:.35s;
+    text-align:center;
+
+    transition:.4s;
+
 }
 
-.beneficio:hover{
+.beneficio-card:hover{
 
-    transform:translateY(-12px);
+    transform:translateY(-10px);
 
     border-color:var(--amarillo);
 
-    box-shadow:0 20px 40px rgba(249,253,4,.18);
+    box-shadow:0 20px 45px rgba(249,253,4,.15);
+
 }
 
-.beneficio-icon{
+.beneficio-icono{
 
-    width:90px;
+    font-size:3rem;
 
-    height:90px;
+    margin-bottom:20px;
 
-    margin:auto;
+}
 
-    margin-bottom:25px;
+.beneficio-card h3{
+
+    font-size:1.6rem;
+
+    margin-bottom:15px;
+
+}
+
+.beneficio-card p{
+
+    color:#bdbdbd;
+
+    line-height:1.7;
+
+}
+
+
+/*========================================
+        PLANES
+========================================*/
+
+.planes{
+
+    padding:120px 8%;
+
+    background:#050505;
+
+}
+
+.planes-grid{
+
+    display:grid;
+
+    grid-template-columns:repeat(auto-fit,minmax(320px,1fr));
+
+    gap:35px;
+
+    align-items:stretch;
+
+}
+
+
+/*========================================
+        TARJETAS
+========================================*/
+
+.plan-card{
+
+    position:relative;
+
+    background:linear-gradient(180deg,#181818,#101010);
+
+    border:1px solid rgba(255,255,255,.08);
+
+    border-radius:30px;
+
+    padding:45px 35px;
+
+    overflow:hidden;
+
+    transition:.4s;
+
+}
+
+.plan-card:hover{
+
+    transform:
+    translateY(-15px)
+    scale(1.03)
+    rotateX(4deg);
+
+    border-color:var(--amarillo);
+
+    box-shadow:
+    0 35px 70px rgba(249,253,4,.22);
+
+}
+
+/*========================================
+        EFECTO PREMIUM
+========================================*/
+
+.plan-card{
+
+    position:relative;
+
+    overflow:hidden;
+
+}
+
+/* Reflejo */
+
+.plan-card::before{
+
+    content:"";
+
+    position:absolute;
+
+    top:-120%;
+
+    left:-60%;
+
+    width:45%;
+
+    height:320%;
+
+    background:linear-gradient(
+        90deg,
+        transparent,
+        rgba(255,255,255,.15),
+        transparent
+    );
+
+    transform:rotate(25deg);
+
+    transition:.8s;
+
+}
+
+/* Glow */
+
+.plan-card::after{
+
+    content:"";
+
+    position:absolute;
+
+    inset:0;
+
+    background:radial-gradient(circle,
+    rgba(249,253,4,.18),
+    transparent 70%);
+
+    opacity:0;
+
+    transition:.45s;
+
+    pointer-events:none;
+
+}
+
+.plan-card:hover::before{
+
+    left:140%;
+
+}
+
+.plan-card:hover::after{
+
+    opacity:1;
+
+}
+
+
+/*========================================
+        PLAN DESTACADO
+========================================*/
+
+.destacado{
+
+    border:2px solid var(--amarillo);
+
+    transform:scale(1.05);
+
+}
+
+.destacado:hover{
+
+    transform:scale(1.08);
+
+}
+
+
+/*========================================
+        ETIQUETAS
+========================================*/
+
+.plan-etiqueta{
+
+    display:inline-block;
+
+    padding:8px 18px;
+
+    background:#222;
+
+    border-radius:30px;
+
+    color:white;
+
+    font-size:.8rem;
+
+    font-weight:bold;
+
+    margin-bottom:20px;
+
+}
+
+.elite{
+
+    background:var(--amarillo);
+
+    color:black;
+
+}
+
+.plan-popular{
+
+    position:absolute;
+
+    top:20px;
+
+    right:-45px;
+
+    background:var(--amarillo);
+
+    color:black;
+
+    font-weight:bold;
+
+    padding:10px 60px;
+
+    transform:rotate(40deg);
+
+    font-size:.8rem;
+
+}
+
+
+/*========================================
+        PRECIO
+========================================*/
+
+.plan-precio{
+
+    margin:30px 0;
+
+}
+
+.plan-precio .precio{
+
+    display:inline-block;
+
+    font-size:3.4rem;
+
+    font-weight:900;
+
+    color:var(--amarillo);
+
+    transition:.35s;
+
+}
+
+.plan-precio small{
+
+    color:#cfcfcf;
+
+    font-size:1rem;
+
+}
+
+.plan-card:hover .precio{
+
+    transform:scale(1.12);
+
+    text-shadow:
+    0 0 10px rgba(249,253,4,.5),
+    0 0 20px rgba(249,253,4,.35);
+
+}
+
+
+/*========================================
+        LISTA
+========================================*/
+
+.plan-card ul{
+
+    list-style:none;
+
+    margin:35px 0;
+
+}
+
+.plan-card li{
+
+    padding:14px 0;
+
+    border-bottom:1px solid rgba(255,255,255,.08);
+
+    color:#d5d5d5;
+
+}
+
+
+/*========================================
+        BOTÓN
+========================================*/
+
+.plan-card a{
+
+    position:relative;
 
     display:flex;
 
@@ -776,83 +809,13 @@ nav a:hover::after{
 
     align-items:center;
 
-    border-radius:50%;
+    gap:12px;
 
-    background:rgba(249,253,4,.08);
+    overflow:hidden;
 
-    font-size:3rem;
-}
+    padding:18px;
 
-.beneficio h3{
-
-    color:white;
-
-    margin-bottom:18px;
-
-    font-size:1.5rem;
-}
-
-.beneficio p{
-
-    color:#cfcfcf;
-
-    line-height:1.7;
-}
-
-
-/*====================================
-        CTA FINAL
-=====================================*/
-
-.cta-final{
-
-    padding:140px 20px;
-
-    text-align:center;
-
-    background:
-    linear-gradient(rgba(0,0,0,.82),rgba(0,0,0,.82)),
-    url("../imagenes/equipo.jpeg");
-
-    background-size:cover;
-
-    background-position:center;
-}
-
-.cta-final h2{
-
-    font-size:4rem;
-
-    color:white;
-
-    margin-bottom:25px;
-}
-
-.cta-final span{
-
-    color:var(--amarillo);
-}
-
-.cta-final p{
-
-    color:#d4d4d4;
-
-    max-width:700px;
-
-    margin:auto;
-
-    margin-bottom:45px;
-
-    font-size:1.2rem;
-
-    line-height:1.8;
-}
-
-.cta-whatsapp{
-
-    display:inline-block;
-
-    padding:20px 50px;
+    border-radius:50px;
 
     background:var(--amarillo);
 
@@ -862,372 +825,221 @@ nav a:hover::after{
 
     font-weight:bold;
 
-    border-radius:60px;
+    transition:.35s;
+
+}
+
+.plan-card a:hover{
+
+    transform:translateY(-4px);
+
+    box-shadow:0 0 30px rgba(249,253,4,.35);
+
+}
+
+.plan-card a::after{
+
+    content:"→";
+
+    font-size:20px;
 
     transition:.35s;
+
 }
 
-.cta-whatsapp:hover{
+.plan-card:hover a{
 
-    transform:translateY(-8px);
+    letter-spacing:1px;
 
-    box-shadow:0 0 35px rgba(249,253,4,.45);
 }
 
+.plan-card:hover a::after{
 
-/*====================================
-          FOOTER
-=====================================*/
+    transform:translateX(8px);
 
-footer{
-
-    background:#050505;
-
-    text-align:center;
-
-    padding:50px 20px;
-
-    border-top:1px solid rgba(255,255,255,.06);
-}
-
-footer h3{
-
-    color:var(--amarillo);
-
-    margin-bottom:15px;
-
-    font-size:2rem;
-}
-
-footer p{
-
-    color:#a7a7a7;
 }
 
 
-/*====================================
+/*========================================
         RESPONSIVE
-=====================================*/
+========================================*/
 
 @media(max-width:768px){
 
     .beneficios{
 
         padding:80px 20px;
+
     }
 
-    .beneficios h2{
+    .planes{
 
-        font-size:2.2rem;
+        padding:80px 20px;
+
     }
 
-    .beneficios-grid{
+    .titulo-seccion h2{
+
+        font-size:2.4rem;
+
+    }
+
+    .planes-grid{
 
         grid-template-columns:1fr;
+
     }
 
-    .cta-final{
+    .destacado{
 
-        padding:90px 20px;
-    }
+        transform:none;
 
-    .cta-final h2{
-
-        font-size:2.5rem;
-    }
-
-    .cta-final p{
-
-        font-size:1rem;
-    }
-
-    .cta-whatsapp{
-
-        width:100%;
-
-        max-width:320px;
     }
 
 }
 
-/*=====================================
-        TABLA COMPARATIVA
-=====================================*/
+/*========================================
+        COMPARATIVA
+========================================*/
 
-.comparacion{
+.comparativa{
 
     padding:120px 8%;
 
-    background:#050505;
+    background:#080808;
 
-    text-align:center;
 }
 
-.comparacion h2{
-
-    font-size:3rem;
-
-    color:white;
-
-    margin-bottom:15px;
-}
-
-.comparacion h2 span{
-
-    color:var(--amarillo);
-}
-
-.comparacion-subtitle{
-
-    color:#bdbdbd;
-
-    margin-bottom:50px;
-}
-
-.tabla-responsive{
+.tabla-comparativa{
 
     overflow-x:auto;
+
+    margin-top:60px;
+
 }
 
-table{
+.tabla-comparativa table{
 
     width:100%;
 
     border-collapse:collapse;
 
-    background:#111;
+    min-width:750px;
+
+    background:#121212;
 
     border-radius:20px;
 
     overflow:hidden;
+
 }
 
-th{
+.tabla-comparativa th{
 
     background:var(--amarillo);
 
     color:black;
 
-    padding:20px;
+    padding:22px;
 
     font-size:1.1rem;
+
 }
 
-td{
+.tabla-comparativa td{
 
     padding:20px;
-
-    border-bottom:1px solid rgba(255,255,255,.08);
-
-    color:white;
-}
-
-tbody tr{
-
-    transition:.3s;
-}
-
-tbody tr:hover{
-
-    background:#1d1d1d;
-}
-
-
-
-/*=====================================
-            FAQ
-=====================================*/
-
-.faq{
-
-    padding:120px 8%;
-
-    background:#090909;
-}
-
-.faq h2{
 
     text-align:center;
 
-    font-size:3rem;
+    border-bottom:1px solid rgba(255,255,255,.08);
 
-    margin-bottom:60px;
+    color:#d9d9d9;
 
-    color:white;
 }
 
-.faq h2 span{
-
-    color:var(--amarillo);
-}
-
-.faq-container{
-
-    max-width:900px;
-
-    margin:auto;
-}
-
-.faq-item{
-
-    margin-bottom:20px;
-
-    border-radius:15px;
-
-    overflow:hidden;
-
-    border:1px solid rgba(255,255,255,.08);
-
-    background:#151515;
-}
-
-.faq-question{
-
-    width:100%;
-
-    padding:22px;
-
-    background:none;
-
-    border:none;
-
-    color:white;
+.tabla-comparativa td:first-child{
 
     text-align:left;
 
-    cursor:pointer;
-
-    font-size:1.1rem;
-
     font-weight:bold;
-
-    transition:.3s;
-}
-
-.faq-question:hover{
-
-    background:rgba(249,253,4,.08);
-}
-
-.faq-answer{
-
-    max-height:0;
-
-    overflow:hidden;
-
-    transition:max-height .4s ease;
-
-    background:#101010;
-}
-
-.faq-answer p{
-
-    padding:20px;
-
-    color:#d1d1d1;
-
-    line-height:1.7;
-}
-
-/*==================================
-        WHATSAPP
-==================================*/
-
-.whatsapp{
-
-    position:fixed;
-
-    right:25px;
-
-    bottom:25px;
-
-    width:70px;
-
-    height:70px;
-
-    background:#25D366;
 
     color:white;
 
-    font-size:2rem;
-
-    display:flex;
-
-    justify-content:center;
-
-    align-items:center;
-
-    border-radius:50%;
-
-    text-decoration:none;
-
-    box-shadow:0 0 25px rgba(37,211,102,.5);
-
-    z-index:999;
-
-    transition:.3s;
-
-    animation:float 2.5s infinite;
 }
 
-.whatsapp:hover{
+.tabla-comparativa tr:hover{
 
-    transform:scale(1.1);
-}
-
-@keyframes float{
-
-    0%{
-
-        transform:translateY(0);
-
-    }
-
-    50%{
-
-        transform:translateY(-8px);
-
-    }
-
-    100%{
-
-        transform:translateY(0);
-
-    }
+    background:#1c1c1c;
 
 }
 
+/*========================================
+        ESTADÍSTICAS
+========================================*/
 
+.estadisticas{
 
-/*=====================================
-        RESPONSIVE
-=====================================*/
+    padding:120px 8%;
 
-@media(max-width:768px){
+    background:linear-gradient(180deg,#050505,#101010);
 
-    .comparacion{
+}
 
-        padding:80px 20px;
-    }
+.estadisticas-grid{
 
-    .comparacion h2{
+    display:grid;
 
-        font-size:2.2rem;
-    }
+    grid-template-columns:repeat(auto-fit,minmax(220px,1fr));
 
-    table{
+    gap:35px;
 
-        min-width:650px;
-    }
+}
 
-    .faq{
+.estadistica{
 
-        padding:80px 20px;
-    }
+    background:#151515;
 
-    .faq h2{
+    border:1px solid rgba(255,255,255,.08);
 
-        font-size:2.2rem;
-    }
+    border-radius:25px;
+
+    padding:45px 20px;
+
+    text-align:center;
+
+    transition:.4s;
+
+}
+
+.estadistica:hover{
+
+    transform:translateY(-10px);
+
+    border-color:var(--amarillo);
+
+    box-shadow:0 20px 45px rgba(249,253,4,.18);
+
+}
+
+.estadistica h2{
+
+    font-size:4rem;
+
+    color:var(--amarillo);
+
+    margin-bottom:15px;
+
+    font-weight:900;
+
+}
+
+.estadistica p{
+
+    color:#d6d6d6;
+
+    font-size:1.1rem;
+
+    line-height:1.6;
 
 }

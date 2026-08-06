@@ -1,31 +1,53 @@
-const sliders = document.querySelectorAll(".producto-slider");
+// ==============================
+// SLIDER DE PRODUCTOS
+// ==============================
 
-sliders.forEach(slider=>{
+document.querySelectorAll(".producto-imagen").forEach(slider => {
 
-    const imgs = slider.querySelectorAll("img");
+    const imagenes = slider.querySelectorAll("img");
+    const puntos = slider.querySelectorAll(".indicadores span");
 
-    const dots = slider.querySelectorAll(".producto-dots span");
+    const btnIzquierda = slider.querySelector(".izquierda");
+    const btnDerecha = slider.querySelector(".derecha");
 
-    let actual = 0;
+    let indice = 0;
 
-    setInterval(()=>{
+    function mostrarImagen(i){
 
-        imgs[actual].classList.remove("active");
+        imagenes.forEach(img => img.classList.remove("activa"));
+        puntos.forEach(p => p.classList.remove("activo"));
 
-        dots[actual].classList.remove("active");
+        imagenes[i].classList.add("activa");
+        puntos[i].classList.add("activo");
 
-        actual++;
+    }
 
-        if(actual>=imgs.length){
+    btnDerecha.addEventListener("click", () => {
 
-            actual=0;
+        indice++;
+
+        if(indice >= imagenes.length){
+
+            indice = 0;
 
         }
 
-        imgs[actual].classList.add("active");
+        mostrarImagen(indice);
 
-        dots[actual].classList.add("active");
+    });
 
-    },3000);
+    btnIzquierda.addEventListener("click", () => {
+
+        indice--;
+
+        if(indice < 0){
+
+            indice = imagenes.length - 1;
+
+        }
+
+        mostrarImagen(indice);
+
+    });
 
 });
