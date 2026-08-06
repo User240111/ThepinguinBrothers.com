@@ -181,6 +181,112 @@ nav a:hover::after{
 
 }
 
+@media (max-width:768px){
+
+    header{
+        position:fixed;
+        top:10px;
+        left:50%;
+        transform:translateX(-50%);
+        width:95%;
+        height:70px;
+
+        display:flex;
+        justify-content:space-between;
+        align-items:center;
+
+        padding:0 18px;
+
+        background:rgba(15,15,15,.92);
+        backdrop-filter:blur(15px);
+        -webkit-backdrop-filter:blur(15px);
+
+        border-radius:18px;
+        z-index:9999;
+    }
+
+    .logo{
+        display:flex;
+        align-items:center;
+        gap:10px;
+        font-size:1.2rem;
+    }
+
+    .logo-img{
+        width:42px;
+        height:42px;
+    }
+
+    .menu-toggle{
+        display:block !important;
+        font-size:2rem;
+        color:#f9fd04;
+        cursor:pointer;
+        z-index:10000;
+    }
+
+    nav{
+        display:none;
+        position:absolute;
+        top:80px;
+        left:0;
+        width:100%;
+        background:rgba(15,15,15,.97);
+        border-radius:18px;
+        overflow:hidden;
+    }
+
+    nav.active{
+        display:block;
+    }
+
+    nav ul{
+        display:flex;
+        flex-direction: row;
+        gap:0;
+    }
+
+    nav li{
+        width:100%;
+        list-style:none;
+    }
+
+    nav a{
+        display:block;
+        padding:18px;
+        text-align:center;
+        color:white;
+        text-decoration:none;
+    }
+
+    nav a:hover{
+        background:#222;
+        color:#f9fd04;
+    }
+
+    nav a::after{
+        display:none;
+    }
+
+    .hero-content{
+        padding:0 25px;
+    }
+
+    .hero-content h1{
+        font-size:2.7rem;
+    }
+
+    .hero-content p{
+        font-size:1rem;
+    }
+
+    .btn{
+        width:100%;
+        max-width:320px;
+        text-align:center;
+    }
+
+
 /*========================================
             HERO PRODUCTOS
 ========================================*/
