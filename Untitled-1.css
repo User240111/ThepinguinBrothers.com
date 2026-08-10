@@ -1559,7 +1559,7 @@ font-weight:bold;
 
     background:radial-gradient(
         circle,
-        rgba(249,253,4,.10),
+        rgba(0, 0, 0, 0.89),
         transparent 70%
     );
 
