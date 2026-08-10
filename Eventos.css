@@ -211,6 +211,80 @@ nav a:hover::after{
 
 }
 
+@media (max-width:768px){
+
+    header{
+        position:fixed;
+        top:10px;
+        left:50%;
+        transform:translateX(-50%);
+        width:95%;
+        height:70px;
+        display:flex;
+        justify-content:space-between;
+        align-items:center;
+        padding:0 18px;
+        background:rgba(15,15,15,.92);
+        backdrop-filter:blur(15px);
+        -webkit-backdrop-filter:blur(15px);
+        border-radius:18px;
+        z-index:9999;
+    }
+
+    .logo{
+        display:flex;
+        align-items:center;
+        gap:10px;
+        font-size:1.2rem;
+    }
+
+    .logo-img{
+        width:42px;
+        height:42px;
+    }
+
+    .menu-toggle{
+        display:block !important;
+        font-size:2rem;
+        color:#f9fd04;
+        cursor:pointer;
+    }
+
+    nav{
+        display:none;
+        position:absolute;
+        top:80px;
+        left:0;
+        width:100%;
+        background:rgba(15,15,15,.97);
+        border-radius:18px;
+        overflow:hidden;
+    }
+
+    nav.active{
+        display:block;
+    }
+
+    nav ul{
+        flex-direction:column;
+        gap:0;
+    }
+
+    nav li{
+        width:100%;
+    }
+
+    nav a{
+        display:block;
+        padding:18px;
+        text-align:center;
+    }
+
+    nav a::after{
+        display:none;
+    }
+
+}
 
 /*========================================
             HERO
@@ -384,6 +458,22 @@ nav a:hover::after{
     color:black;
 
 }
+
+.frase-divider{
+    background:#000000;
+    padding:20px;
+    text-align:center;
+
+    border-top:2px solid rgb(249,253,4);
+    border-bottom:2px solid rgb(249,253,4);
+}
+
+.frase-divider span{
+    color:rgb(255, 255, 255);
+    font-weight:bold;
+    letter-spacing:3px;
+}
+
 
 
 /*========================================
@@ -1739,5 +1829,44 @@ img{
         font-size:2rem;
 
     }
+
+}
+
+
+/* FOOTER */
+
+.footer{
+
+    background:#0d0d0d;
+
+    border-top:2px solid #FFD400;
+
+    padding:25px 20px;
+
+    text-align:center;
+
+}
+
+.footer-content p{
+
+    margin:6px 0;
+
+    color:#bdbdbd;
+
+    font-size:15px;
+
+}
+
+.footer-content strong{
+
+    color:#FFD400;
+
+}
+
+.footer-content p:last-child{
+
+    color:#777;
+
+    font-size:14px;
 
 }

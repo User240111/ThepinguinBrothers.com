@@ -190,17 +190,13 @@ nav a:hover::after{
         transform:translateX(-50%);
         width:95%;
         height:70px;
-
         display:flex;
         justify-content:space-between;
         align-items:center;
-
         padding:0 18px;
-
         background:rgba(15,15,15,.92);
         backdrop-filter:blur(15px);
         -webkit-backdrop-filter:blur(15px);
-
         border-radius:18px;
         z-index:9999;
     }
@@ -222,7 +218,6 @@ nav a:hover::after{
         font-size:2rem;
         color:#f9fd04;
         cursor:pointer;
-        z-index:10000;
     }
 
     nav{
@@ -241,51 +236,25 @@ nav a:hover::after{
     }
 
     nav ul{
-        display:flex;
-        flex-direction: row;
+        flex-direction:column;
         gap:0;
     }
 
     nav li{
         width:100%;
-        list-style:none;
     }
 
     nav a{
         display:block;
         padding:18px;
         text-align:center;
-        color:white;
-        text-decoration:none;
-    }
-
-    nav a:hover{
-        background:#222;
-        color:#f9fd04;
     }
 
     nav a::after{
         display:none;
     }
 
-    .hero-content{
-        padding:0 25px;
-    }
-
-    .hero-content h1{
-        font-size:2.7rem;
-    }
-
-    .hero-content p{
-        font-size:1rem;
-    }
-
-    .btn{
-        width:100%;
-        max-width:320px;
-        text-align:center;
-    }
-
+}
 
 /*========================================
             HERO PRODUCTOS
