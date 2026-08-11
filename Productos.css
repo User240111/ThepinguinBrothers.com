@@ -841,7 +841,7 @@ nav a:hover::after{
 
     background:var(--amarillo);
 
-    color:black;
+    color:rgb(255, 254, 254);
 
     text-decoration:none;
 
@@ -855,7 +855,7 @@ nav a:hover::after{
 
     transform:translateY(-4px);
 
-    box-shadow:0 0 30px rgba(249,253,4,.45);
+    box-shadow:0 0 30px rgba(251, 255, 0, 0.829);
 
 }
 
@@ -1049,5 +1049,243 @@ nav a:hover::after{
     color:#777;
 
     font-size:14px;
+
+}
+
+/* ========================================
+   PERSONALIZA TU DISEÑO
+======================================== */
+
+.personaliza{
+
+    position:relative;
+
+    margin:100px auto 80px;
+
+    width:90%;
+    max-width:1200px;
+
+    padding:80px 40px;
+
+    text-align:center;
+
+    background:
+        radial-gradient(
+            circle at center,
+            rgba(249,253,4,.10),
+            transparent 60%
+        ),
+        #0d0d0d;
+
+    border:1px solid rgba(249,253,4,.25);
+
+    border-radius:30px;
+
+    overflow:hidden;
+
+}
+
+
+/* Brillo decorativo */
+
+.personaliza::before{
+
+    content:"";
+
+    position:absolute;
+
+    width:250px;
+    height:250px;
+
+    top:-150px;
+    left:-100px;
+
+    background:#f9fd04;
+
+    opacity:.08;
+
+    filter:blur(80px);
+
+    border-radius:50%;
+
+}
+
+.personaliza::after{
+
+    content:"";
+
+    position:absolute;
+
+    width:250px;
+    height:250px;
+
+    bottom:-150px;
+    right:-100px;
+
+    background:#f9fd04;
+
+    opacity:.06;
+
+    filter:blur(80px);
+
+    border-radius:50%;
+
+}
+
+
+/* Contenido */
+
+.personaliza-contenido{
+
+    position:relative;
+
+    z-index:2;
+
+    max-width:700px;
+
+    margin:auto;
+
+}
+
+
+/* Etiqueta */
+
+.personaliza-etiqueta{
+
+    display:inline-block;
+
+    margin-bottom:18px;
+
+    color:#f9fd04;
+
+    font-size:.8rem;
+
+    font-weight:bold;
+
+    letter-spacing:4px;
+
+}
+
+
+/* Título */
+
+.personaliza h2{
+
+    margin:0;
+
+    color:white;
+
+    font-size:clamp(2.2rem, 5vw, 4rem);
+
+    line-height:1.1;
+
+}
+
+.personaliza h2 span{
+
+    color:#f9fd04;
+
+}
+
+
+/* Descripción */
+
+.personaliza p{
+
+    max-width:650px;
+
+    margin:25px auto 35px;
+
+    color:#bdbdbd;
+
+    font-size:1.05rem;
+
+    line-height:1.7;
+
+}
+
+
+/* Botón */
+
+.btn-personaliza{
+
+    display:inline-flex;
+
+    align-items:center;
+
+    justify-content:center;
+
+    gap:10px;
+
+    padding:16px 30px;
+
+    background:#f9fd04;
+
+    color:#000;
+
+    border-radius:50px;
+
+    text-decoration:none;
+
+    font-weight:bold;
+
+    transition:.35s ease;
+
+}
+
+.btn-personaliza span{
+
+    font-size:1.2rem;
+
+}
+
+.btn-personaliza:hover{
+
+    transform:translateY(-5px) scale(1.03);
+
+    box-shadow:
+
+        0 10px 35px rgba(249,253,4,.30);
+
+}
+
+
+/* ========================================
+   CELULAR
+======================================== */
+
+@media(max-width:768px){
+
+    .personaliza{
+
+        width:calc(100% - 30px);
+
+        margin:70px auto 50px;
+
+        padding:60px 22px;
+
+        border-radius:24px;
+
+    }
+
+    .personaliza h2{
+
+        font-size:2.3rem;
+
+    }
+
+    .personaliza p{
+
+        font-size:.95rem;
+
+    }
+
+    .btn-personaliza{
+
+        width:100%;
+
+        padding:16px 20px;
+
+    }
 
 }
