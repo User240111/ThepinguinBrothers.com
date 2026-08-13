@@ -901,101 +901,142 @@ nav a:hover::after{
 
 }
 
-/* ========================================
-   RESPONSIVE
-======================================== */
+@media(max-width:600px){
 
-@media(max-width:900px){
+    /* ================================
+       HERO SERVICIOS - CELULAR
+    ================================= */
 
     .hero-servicios{
 
-        grid-template-columns:1fr;
+        min-height:auto;
+
+        padding:110px 18px 50px;
+
+        display:flex;
+
+        flex-direction:column;
+
+        gap:30px;
 
         text-align:center;
-
-        padding-top:130px;
 
     }
 
 
-    .hero-servicios-contenido{
+    /* ETIQUETA */
 
-        margin:auto;
+    .hero-servicios .hero-etiqueta{
+
+        font-size:.65rem;
+
+        padding:6px 12px;
+
+        letter-spacing:1.5px;
+
+        margin-bottom:15px;
+
+    }
+
+
+    /* TITULO */
+
+    .hero-servicios h1{
+
+        font-size:2.2rem;
+
+        line-height:1.05;
 
     }
 
 
     .hero-servicios-contenido > p{
 
-        margin-left:auto;
+        font-size:.9rem;
 
-        margin-right:auto;
+        line-height:1.6;
+
+        margin:20px auto;
+
+        max-width:340px;
 
     }
 
 
+    /* BOTÓN */
+
+    .btn-hero-servicios{
+
+        padding:13px 20px;
+
+        font-size:.85rem;
+
+    }
+
+
+    /* IMAGEN */
+
     .hero-servicios-imagen{
 
-        min-height:400px;
+        min-height:280px;
+
+        width:100%;
 
     }
 
 
     .hero-servicios-imagen img{
 
-        height:400px;
+        width:100%;
+
+        max-width:330px;
+
+        height:280px;
+
+        border-radius:22px;
 
     }
 
 
-    .servicios-grid{
+    /* CÍRCULO */
 
-        grid-template-columns:
-            1fr 1fr;
+    .hero-brillo{
 
-    }
+        width:230px;
 
-}
-
-
-@media(max-width:600px){
-
-    .hero-servicios{
-
-        padding:
-            120px 20px
-            70px;
-
-        gap:40px;
+        height:230px;
 
     }
 
 
-    .hero-servicios h1{
-
-        font-size:3rem;
-
-    }
-
-
-    .hero-servicios-imagen{
-
-        min-height:350px;
-
-    }
-
-
-    .hero-servicios-imagen img{
-
-        height:350px;
-
-    }
-
+    /* ================================
+       TARJETAS
+    ================================= */
 
     .servicios-adicionales{
 
-        padding:
-            70px 15px;
+        padding:60px 15px;
+
+    }
+
+
+    .servicios-header{
+
+        margin-bottom:40px;
+
+    }
+
+
+    .servicios-header h2{
+
+        font-size:2rem;
+
+    }
+
+
+    .servicios-header p{
+
+        font-size:.9rem;
 
     }
 
@@ -1004,18 +1045,41 @@ nav a:hover::after{
 
         grid-template-columns:1fr;
 
+        gap:20px;
+
+    }
+
+
+    .servicio-imagen{
+
+        height:190px;
+
     }
 
 
     .servicio-contenido{
 
-        padding:
-            50px 25px 30px;
+        padding:45px 22px 25px;
+
+    }
+
+
+    .servicio-contenido h3{
+
+        font-size:1.4rem;
+
+    }
+
+
+    .servicio-contenido > p{
+
+        font-size:.9rem;
+
+        min-height:auto;
 
     }
 
 }
-
 /* FOOTER */
 
 .footer{
