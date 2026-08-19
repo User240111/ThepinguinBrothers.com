@@ -1570,8 +1570,6 @@ nav a:hover::after{
 
 }
 
-.
-
 /* ========================================
    PROMOCIÓN
 ======================================== */
@@ -1648,5 +1646,185 @@ nav a:hover::after{
     font-weight:bold;
 
     letter-spacing:.5px;
+
+}
+
+/* ========================================
+   RESPONSIVE - TABLET
+======================================== */
+
+@media (max-width: 768px) {
+
+    .membresia-pagos {
+        margin-top: 20px;
+        gap: 10px;
+        width: 100%;
+    }
+
+    .btn-pago {
+        width: 100%;
+        box-sizing: border-box;
+        padding: 15px 16px;
+        border-radius: 12px;
+    }
+
+    .pago-texto strong {
+        font-size: .85rem;
+        letter-spacing: .8px;
+    }
+
+    .pago-texto small {
+        font-size: .7rem;
+        line-height: 1.4;
+    }
+
+    .pago-flecha {
+        font-size: 1.2rem;
+        margin-left: 10px;
+        flex-shrink: 0;
+    }
+
+    .btn-pago-domiciliacion {
+        margin-top: 3px;
+        padding-top: 20px;
+    }
+
+    .pago-recomendado {
+        left: 16px;
+        padding: 3px 8px;
+        font-size: .55rem;
+    }
+
+    .promo-domiciliacion {
+        padding: 14px;
+        border-radius: 12px;
+    }
+
+    .promo-contenido > strong {
+        font-size: .7rem;
+        letter-spacing: 1.2px;
+    }
+
+    .promo-contenido p {
+        font-size: .7rem;
+        line-height: 1.5;
+        margin-bottom: 10px;
+    }
+
+    .promo-opciones {
+        gap: 6px;
+    }
+
+    .promo-opciones span {
+        padding: 6px 8px;
+        font-size: .6rem;
+    }
+}
+
+
+/* ========================================
+   RESPONSIVE - CELULAR
+======================================== */
+
+@media (max-width: 480px) {
+
+    .membresia-pagos {
+        margin-top: 16px;
+        gap: 9px;
+    }
+
+    .btn-pago {
+        padding: 14px 13px;
+        min-height: 58px;
+        border-radius: 11px;
+    }
+
+    .pago-texto {
+        gap: 3px;
+        min-width: 0;
+    }
+
+    .pago-texto strong {
+        font-size: .78rem;
+        letter-spacing: .5px;
+    }
+
+    .pago-texto small {
+        font-size: .65rem;
+        line-height: 1.35;
+    }
+
+    .pago-flecha {
+        font-size: 1.1rem;
+        margin-left: 8px;
+    }
+
+    .btn-pago-domiciliacion {
+        padding-top: 20px;
+    }
+
+    .pago-recomendado {
+        left: 12px;
+        padding: 3px 7px;
+        font-size: .5rem;
+        letter-spacing: .7px;
+        border-radius: 0 0 5px 5px;
+    }
+
+    .promo-domiciliacion {
+        padding: 12px;
+        border-radius: 10px;
+    }
+
+    .promo-contenido > strong {
+        font-size: .65rem;
+        letter-spacing: 1px;
+    }
+
+    .promo-contenido p {
+        font-size: .65rem;
+        line-height: 1.45;
+    }
+
+    .promo-opciones {
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        gap: 6px;
+    }
+
+    .promo-opciones span {
+        padding: 7px 6px;
+        font-size: .58rem;
+        text-align: center;
+    }
+
+}
+
+
+/* ========================================
+   CELULARES MUY PEQUEÑOS
+======================================== */
+
+@media (max-width: 360px) {
+
+    .btn-pago {
+        padding: 13px 11px;
+    }
+
+    .pago-texto strong {
+        font-size: .72rem;
+    }
+
+    .pago-texto small {
+        font-size: .6rem;
+    }
+
+    .pago-flecha {
+        font-size: 1rem;
+    }
+
+    .promo-opciones {
+        grid-template-columns: 1fr;
+    }
 
 }
