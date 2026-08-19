@@ -1378,3 +1378,195 @@ nav a:hover::after{
 
 }
 
+
+/* ========================================
+   OPCIONES DE PAGO
+======================================== */
+
+.membresia-pagos{
+
+    margin-top:25px;
+
+    display:flex;
+
+    flex-direction:column;
+
+    gap:12px;
+
+}
+
+
+/* ========================================
+   BOTONES
+======================================== */
+
+.btn-pago{
+
+    display:flex;
+
+    align-items:center;
+
+    gap:14px;
+
+    padding:15px 18px;
+
+    border-radius:14px;
+
+    text-decoration:none;
+
+    transition:.3s;
+
+}
+
+
+/* ICONO */
+
+.pago-icono{
+
+    width:42px;
+
+    height:42px;
+
+    display:flex;
+
+    align-items:center;
+
+    justify-content:center;
+
+    border-radius:50%;
+
+    font-size:1.1rem;
+
+    flex-shrink:0;
+
+}
+
+
+/* TEXTO */
+
+.pago-texto{
+
+    display:flex;
+
+    flex-direction:column;
+
+    flex:1;
+
+    text-align:left;
+
+}
+
+
+.pago-texto strong{
+
+    font-size:.95rem;
+
+}
+
+
+.pago-texto small{
+
+    margin-top:3px;
+
+    font-size:.75rem;
+
+    opacity:.7;
+
+}
+
+
+/* FLECHA */
+
+.pago-flecha{
+
+    font-size:1.3rem;
+
+    transition:.3s;
+
+}
+
+
+/* ========================================
+   PAGO ÚNICO
+======================================== */
+
+.btn-pago-unico{
+
+    background:#161616;
+
+    border:1px solid
+        rgba(255,255,255,.12);
+
+    color:white;
+
+}
+
+
+.btn-pago-unico .pago-icono{
+
+    background:
+        rgba(255,255,255,.08);
+
+}
+
+
+.btn-pago-unico:hover{
+
+    border-color:
+        rgba(255,255,255,.3);
+
+    transform:translateY(-2px);
+
+}
+
+
+.btn-pago-unico:hover .pago-flecha{
+
+    transform:translateX(5px);
+
+}
+
+
+/* ========================================
+   DOMICILIACIÓN
+======================================== */
+
+.btn-pago-domiciliacion{
+
+    background:#f9fd04;
+
+    color:#000;
+
+    border:1px solid #f9fd04;
+
+    box-shadow:
+        0 8px 25px
+        rgba(249,253,4,.12);
+
+}
+
+
+.btn-pago-domiciliacion .pago-icono{
+
+    background:
+        rgba(0,0,0,.1);
+
+}
+
+
+.btn-pago-domiciliacion:hover{
+
+    transform:translateY(-3px);
+
+    box-shadow:
+        0 12px 35px
+        rgba(249,253,4,.22);
+
+}
+
+
+.btn-pago-domiciliacion:hover .pago-flecha{
+
+    transform:translateX(5px);
+
+}
