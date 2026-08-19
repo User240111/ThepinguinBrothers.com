@@ -1402,47 +1402,26 @@ nav a:hover::after{
 
 .btn-pago{
 
+    position:relative;
+
     display:flex;
 
     align-items:center;
 
-    gap:14px;
+    justify-content:space-between;
 
-    padding:15px 18px;
+    padding:16px 20px;
 
     border-radius:14px;
 
     text-decoration:none;
 
-    transition:.3s;
+    overflow:hidden;
+
+    transition:.35s;
 
 }
 
-
-/* ICONO */
-
-.pago-icono{
-
-    width:42px;
-
-    height:42px;
-
-    display:flex;
-
-    align-items:center;
-
-    justify-content:center;
-
-    border-radius:50%;
-
-    font-size:1.1rem;
-
-    flex-shrink:0;
-
-}
-
-
-/* TEXTO */
 
 .pago-texto{
 
@@ -1450,36 +1429,32 @@ nav a:hover::after{
 
     flex-direction:column;
 
-    flex:1;
-
     text-align:left;
+
+    gap:4px;
 
 }
 
 
 .pago-texto strong{
 
-    font-size:.95rem;
+    font-size:.9rem;
+
+    letter-spacing:1px;
 
 }
 
 
 .pago-texto small{
 
-    margin-top:3px;
-
     font-size:.75rem;
 
     opacity:.7;
 
 }
-
-
-/* FLECHA */
-
 .pago-flecha{
 
-    font-size:1.3rem;
+    font-size:1.4rem;
 
     transition:.3s;
 
@@ -1492,20 +1467,12 @@ nav a:hover::after{
 
 .btn-pago-unico{
 
-    background:#161616;
+    background:#151515;
 
     border:1px solid
         rgba(255,255,255,.12);
 
     color:white;
-
-}
-
-
-.btn-pago-unico .pago-icono{
-
-    background:
-        rgba(255,255,255,.08);
 
 }
 
@@ -1520,7 +1487,8 @@ nav a:hover::after{
 }
 
 
-.btn-pago-unico:hover .pago-flecha{
+.btn-pago-unico:hover
+.pago-flecha{
 
     transform:translateX(5px);
 
@@ -1533,23 +1501,19 @@ nav a:hover::after{
 
 .btn-pago-domiciliacion{
 
+    margin-top:5px;
+
+    padding-top:22px;
+
     background:#f9fd04;
 
-    color:#000;
-
     border:1px solid #f9fd04;
+
+    color:#000;
 
     box-shadow:
         0 8px 25px
         rgba(249,253,4,.12);
-
-}
-
-
-.btn-pago-domiciliacion .pago-icono{
-
-    background:
-        rgba(0,0,0,.1);
 
 }
 
@@ -1565,8 +1529,124 @@ nav a:hover::after{
 }
 
 
-.btn-pago-domiciliacion:hover .pago-flecha{
+.btn-pago-domiciliacion
+.pago-flecha{
+
+    color:#000;
+
+}
+
+
+.btn-pago-domiciliacion:hover
+.pago-flecha{
 
     transform:translateX(5px);
+
+}
+
+
+.pago-recomendado{
+
+    position:absolute;
+
+    top:0;
+
+    left:20px;
+
+    padding:4px 10px;
+
+    background:#000;
+
+    color:#f9fd04;
+
+    font-size:.6rem;
+
+    font-weight:bold;
+
+    letter-spacing:1px;
+
+    border-radius:
+        0 0 6px 6px;
+
+}
+
+.
+
+/* ========================================
+   PROMOCIÓN
+======================================== */
+
+.promo-domiciliacion{
+
+    padding:17px;
+
+    border-radius:14px;
+
+    background:
+        rgba(249,253,4,.05);
+
+    border:1px dashed
+        rgba(249,253,4,.4);
+
+}
+
+
+.promo-contenido > strong{
+
+    display:block;
+
+    margin-bottom:5px;
+
+    color:#f9fd04;
+
+    font-size:.75rem;
+
+    letter-spacing:1.5px;
+
+}
+
+
+.promo-contenido p{
+
+    margin:0 0 12px;
+
+    color:#aaa;
+
+    font-size:.75rem;
+
+    line-height:1.5;
+
+}
+
+
+.promo-opciones{
+
+    display:flex;
+
+    flex-wrap:wrap;
+
+    gap:8px;
+
+}
+
+
+.promo-opciones span{
+
+    padding:7px 10px;
+
+    border-radius:6px;
+
+    background:#151515;
+
+    border:1px solid
+        rgba(255,255,255,.08);
+
+    color:#ddd;
+
+    font-size:.65rem;
+
+    font-weight:bold;
+
+    letter-spacing:.5px;
 
 }
